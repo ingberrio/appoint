@@ -16,7 +16,7 @@ import RegisterScreen from './screens/RegisterScreen';
 import PrivateRoute from './screens/PrivateRoute';
 import ProfileScreen from './screens/ProfileScreen.jsx';
 import FilterScreen from './screens/FilterScreen.jsx';
-import AbailabilityScreen from './screens/AbailabilityScreeen.jsx';
+import AvailabilityScreen from './screens/AvailabilityScreen.jsx';
 
 import ScheduleScreen from './screens/ScheduleScreen.jsx';
 
@@ -34,7 +34,7 @@ const router = createBrowserRouter(
       <Route path='/login' element={<LoginScreen />} />
       <Route path='/register' element={<RegisterScreen />} />
       <Route path='/filter' element={<FilterScreen />} />
-      <Route path="/abailability/:specialistId" element={<AbailabilityScreen />} />
+      <Route path="/availability/:specialistId" element={<AvailabilityScreen />} />
       <Route path='/specialist/*' element={<SpecialistScreen />} />
       <Route path='/customer/*' element={<CustomerScreen />} />
       {/* Private Routes */}

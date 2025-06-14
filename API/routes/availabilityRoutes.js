@@ -3,7 +3,7 @@ import {
   createAvailability,
   getAvailabilitiesBySpecialist,
   deleteAvailability,
-} from '../controllers/abailabilityController.js';
+} from '../controllers/availabilityController.js';
 import { protect } from '../middleware/authMiddleware.js';
 import rateLimit from 'express-rate-limit';
 

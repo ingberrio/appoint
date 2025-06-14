@@ -46,7 +46,7 @@ const AppointmentForm = ({ selectedSlot, selectedDate, availability, onSubmit })
 
     if (!userInfo) {
       // Si el usuario no está autenticado
-      navigate('/login', { state: { from: 'abailability', formData } });
+      navigate('/login', { state: { from: 'availability', formData } });
       return;
     }
 

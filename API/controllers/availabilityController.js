@@ -1,5 +1,5 @@
 import asyncHandler from 'express-async-handler';
-import Availability from '../models/abailabilityModel.js';
+import Availability from '../models/availabilityModel.js';
 
 // @desc    Crear una nueva disponibilidad
 // @route   POST /api/availability

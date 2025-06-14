@@ -58,7 +58,7 @@ const specialistSchema = mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: "Diary",
     },
-    abailabilityId: {
+    availabilityId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Availability",
     },
