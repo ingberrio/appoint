@@ -3,16 +3,16 @@ import  axios  from "axios";
 import { Table } from 'flowbite-react'
 import { useQuery } from "react-query";
 
-const fetchAbailability = async () => {
+const fetchAvailability = async () => {
   const response = await axios.get('/api/availability/specialist/65787dc83e6f9c65bbf20464').catch(() => {
     throw new Error('Error fetching specialists');
   });
   return response.data;
 };
 
-export default function Abailability() {
+export default function AvailabilityView() {
 
-  const { data, status} = useQuery("abailability", fetchAbailability);
+  const { data, status} = useQuery("availability", fetchAvailability);
   console.log(data);
   return (
     <div className="overflow-x-auto">
@@ -35,14 +35,14 @@ export default function Abailability() {
           </Table.Head>
           
           <Table.Body className="divide-y">
-          {(data || []).map((abailability) => (
-            <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800" key={abailability._id}>
+          {(data || []).map((availability) => (
+            <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800" key={availability._id}>
               <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                {abailability.specialistId.firstName}
+                {availability.specialistId.firstName}
               </Table.Cell>
-              <Table.Cell>{abailability.dayOfWeek == 1 ? 'Mon' : 'Thus'}</Table.Cell>
-              <Table.Cell>{abailability.specificHours.startTime}</Table.Cell>
-              <Table.Cell>{abailability.status}</Table.Cell> 
+              <Table.Cell>{availability.dayOfWeek == 1 ? 'Mon' : 'Thus'}</Table.Cell>
+              <Table.Cell>{availability.specificHours.startTime}</Table.Cell>
+              <Table.Cell>{availability.status}</Table.Cell>
               <Table.Cell>
                 <a href="#" className="font-medium text-cyan-600 hover:underline dark:text-cyan-500">
                   Edit

@@ -8,7 +8,7 @@ import { useParams } from 'react-router-dom';
 import AppointmentForm from './AppointmentForm';
 import FormContainer from '../components/FormContainer';
 
-const AbailabilityScreen = () => {
+const AvailabilityScreen = () => {
   const [availableSlots, setAvailableSlots] = useState([]);
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [formVisible, setFormVisible] = useState(false);  // Nuevo estado para controlar la visibilidad del formulario
@@ -81,7 +81,7 @@ const AbailabilityScreen = () => {
             <div className='ml-5 p-5 rounded-lg  border-gray-400'>
             {availableSlots.length === 0 ? (
                 <p className="rounded-lg border px-5 py-2.5 text-center text-sm font-medium text-black hover:bg-cyan-200 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
-                > Not abailability
+                > Not availability
                 </p>
               ) : (
                 availableSlots.map((slot) => (
@@ -114,4 +114,4 @@ const AbailabilityScreen = () => {
 };
 
 
-export default AbailabilityScreen;
+export default AvailabilityScreen;

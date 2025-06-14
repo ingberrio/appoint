@@ -12,7 +12,7 @@ import cityRoutes from './routes/cityRoutes.js';
 import specialtyRoutes from './routes/specialtyRoutes.js';
 import customer from './routes/customerRoutes.js';
 import diaryRoutes from './routes/diaryRoutes.js';
-import abailabilityRoutes from './routes/abailabilityRoutes.js';
+import availabilityRoutes from './routes/availabilityRoutes.js';
 import appointmentRoutes from './routes/appointmentRoutes.js';
 import cors from 'cors';
 
@@ -38,7 +38,7 @@ app.use('/api/specialists', specialistRoutes);
 app.use('/api/city', cityRoutes);
 app.use('/api/specialty', specialtyRoutes);
 app.use('/api/diary', diaryRoutes);
-app.use('/api/availability', abailabilityRoutes);
+app.use('/api/availability', availabilityRoutes);
 app.use('/api/appointments', appointmentRoutes);
 
 
